@@ -6,26 +6,26 @@
 .button {
     background-color: #4CAF50; /* Green */
     border: none;
-    color: white;
+    color: black;
     padding: 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 25px;
     margin: 4px 2px;
     cursor: pointer;
 }
 
-.button1 {border-radius: 2px;}
-.button2 {border-radius: 4px;}
-.button3 {border-radius: 8px;}
-.button5 {border-radius: 50%;}
+.button1 {border-radius: 4px;}
+.button2 {border-radius: 30%;}
+.button3 {border-radius: 30%;}
+.button4 {border-radius: 30%;}
 </style>
 </head>
 <body>
-
-<h2>Rounded Buttons</h2>
-<p>Add rounded corners to a button with the border-radius property:</p>
+<h2> Team SHARKS aka D2S</h2>
+<p>Real Time Temoerature and Humidity of Heavy Machine</p>
+<p></p>
 <button id = "btn1" class="button button1">2px</button>
 <button id = "btn2" class="button button2">4px</button>
 <button id = "btn3" class="button button3">8px</button>
@@ -38,6 +38,7 @@
       "accept": "application/json"
   }
 });
+   setInterval( function(){
 	 $.ajax({
                 type: "GET",
                 url: "http://localhost:8888",
@@ -58,6 +59,7 @@
                     $('#btn4').text(json[3]);
                 }
             });
+},1000);
 </script>	
 
 
